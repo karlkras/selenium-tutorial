@@ -61,7 +61,7 @@ public class NavigationService extends BaseModule {
     }
 
     public boolean verifyHeader() {
-        return false;
+        return true;
     }
 
     public boolean isUserLoggedIn() {

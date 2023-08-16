@@ -6,10 +6,7 @@ import com.llts.test.pageclasses.services.NavigationService.PageLink;
 import com.llts.test.base.BaseTest;
 import com.llts.test.utilities.ExcelUtility;
 import com.llts.test.utilities.Tools;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.net.URISyntaxException;
 
@@ -22,7 +19,7 @@ public class AllCoursesTests extends BaseTest {
 
     @BeforeClass
     @Parameters({"browser"})
-    public void setup(String browser) {
+    public void setup(@Optional("chrome") String browser) {
         super.setup(browser);
         navService = loginPage.signInWith(constant("userName"), constant("password"));
         try {

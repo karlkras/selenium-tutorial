@@ -6,6 +6,7 @@ import com.llts.test.utilities.Tools;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import com.llts.test.base.WebDriverFactory.BrowserType;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class BaseTest extends  CustomDriver {
 
     @BeforeClass
     @Parameters({"browser"})
-    public void setup(String browser) {
+    public void setup(@Optional("chrome")String browser) {
         BrowserType theTargetType = BrowserType.valueOf(browser.toUpperCase());
         initialize(WebDriverFactory.getInstance().getDriver(theTargetType));
         setUrl(constant("baseUrl"));

@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 
 public class AllCoursesTests extends BaseTest {
     CategoryFilter catFilter;
-@DataProvider(name="verify_search_course")
+    @DataProvider(name="verify_search_course")
     public Object[][] getSearchCourseData(){
         return ExcelUtility.getTestData("verify_search_course");
     }

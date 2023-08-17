@@ -1,5 +1,6 @@
 package com.llts.test.base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -29,6 +30,8 @@ public class WebDriverFactory {
         threadedBrowser.set(browser);
         switch (browser) {
             case CHROME:
+                WebDriverManager.chromedriver().setup();
+
                 ChromeDriverService chromeservice = new ChromeDriverService.Builder()
                         .withLogOutput(System.out)
                         .build();

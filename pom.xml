@@ -148,7 +148,7 @@
                         <version>${surefire.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>regression_testing_chrome.xml</suiteXmlFile>
+                                <suiteXmlFile>src\test\resources\regression_testing_chrome.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -165,7 +165,7 @@
                         <version>${surefire.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>regression_testing_firefox.xml</suiteXmlFile>
+                                <suiteXmlFile>src\test\resources\regression_testing_firefox.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
